@@ -45,7 +45,7 @@
         </div>
         <div class="flex items-center text-xs md:text-base gap-1">
           <img class="w-6 md:w-9" src="./assets/coin.png" alt="" />
-          <h3>5500 BDT</h3>
+          <h3><span id="mainBalance">5500</span> BDT</h3>
         </div>
       </div>
       <!-- Button div -->
@@ -77,7 +77,9 @@
             class="flex items-center justify-center text-xs w-1/4 h-11 rounded-xl bg-slate-200 md:text-base gap-1 mb-4"
           >
             <img class="w-6 md:w-9" src="./assets/coin.png" alt="" />
-            <h3>0 BDT</h3>
+            <h3>
+              <span id="totalAmount1" class="stat-value text-base">0</span> BDT
+            </h3>
           </div>
           <!-- Donation amount box ends -->
           <h1 class="text-xl font-bold mb-5">
@@ -92,16 +94,36 @@
             need.
           </p>
           <input
+            id="donationInputBox1"
             class="mt-8 mb-5 w-full rounded-lg border-2 p-3"
             type="text"
             placeholder="Write Donation Amount"
           />
           <br />
           <button
-            class="w-full rounded-lg font-bold text-xs md:text-base px-6 py-2 md:px-8 md:py-3 bg-[#B4F461]"
+            id="donateBtn1"
+            class="btn w-full rounded-lg font-bold text-xs md:text-base px-6 py-2 md:px-8 md:py-3 bg-[#B4F461]"
           >
             Donate Now
           </button>
+
+          <!-- Dialog box starts-->
+
+          <dialog id="myModal" class="modal">
+            <div class="modal-box text-center">
+              <h1 class="text-4xl font-bold mb-4">Congrats!</h1>
+              <img class="mx-auto mb-5" src="./assets/coin.png" alt="" />
+              <p class="pt-4">You Have Donated for Humankind</p>
+              <p class="pt-2 font-bold text-slate-500 text-2xl">Successfully</p>
+              <div class="modal-action w-2/5 mx-auto">
+                <form method="dialog">
+                  <button class="btn">Close Confirmation</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+
+          <!-- Dialog box ends-->
         </div>
       </div>
       <!-- Donate card-1 ends -->
@@ -118,7 +140,10 @@
             class="flex items-center justify-center text-xs w-1/4 h-11 rounded-xl bg-slate-200 md:text-base gap-1 mb-4"
           >
             <img class="w-6 md:w-9" src="./assets/coin.png" alt="" />
-            <h3>600 BDT</h3>
+            <h3>
+              <span id="totalAmount2" class="stat-value text-base">600</span>
+              BDT
+            </h3>
           </div>
           <!-- Donation amount box ends -->
           <h1 class="text-xl font-bold mb-5">
@@ -135,13 +160,15 @@
             need.
           </p>
           <input
+            id="donationInputBox2"
             class="mt-8 mb-5 md:mt-10 w-full rounded-lg border-2 p-3"
             type="text"
             placeholder="Write Donation Amount"
           />
           <br />
           <button
-            class="w-full rounded-lg font-bold text-xs md:text-base px-6 py-2 md:px-8 md:py-3 bg-[#B4F461]"
+            id="donateBtn2"
+            class="btn w-full rounded-lg font-bold text-xs md:text-base px-6 py-2 md:px-8 md:py-3 bg-[#B4F461]"
           >
             Donate Now
           </button>
@@ -161,7 +188,10 @@
             class="flex items-center justify-center text-xs w-1/4 h-11 rounded-xl bg-slate-200 md:text-base gap-1 mb-4"
           >
             <img class="w-6 md:w-9" src="./assets/coin.png" alt="" />
-            <h3>2400 BDT</h3>
+            <h3>
+              <span id="totalAmount3" class="stat-value text-base">2400</span>
+              BDT
+            </h3>
           </div>
           <!-- Donation amount box ends -->
           <h1 class="text-xl font-bold mb-5">
@@ -179,13 +209,15 @@
             their time of need.
           </p>
           <input
+            id="donationInputBox3"
             class="mt-8 mb-5 md:mt-10 w-full rounded-lg border-2 p-3"
             type="text"
             placeholder="Write Donation Amount"
           />
           <br />
           <button
-            class="w-full rounded-lg font-bold text-xs md:text-base px-6 py-2 md:px-8 md:py-3 bg-[#B4F461]"
+            id="donateBtn3"
+            class="btn w-full rounded-lg font-bold text-xs md:text-base px-6 py-2 md:px-8 md:py-3 bg-[#B4F461]"
           >
             Donate Now
           </button>
@@ -194,5 +226,6 @@
       <!-- Donate card-3 ends -->
     </main>
     <footer class="bg-[#F9F7F3] py-9 md:py-16"></footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>
