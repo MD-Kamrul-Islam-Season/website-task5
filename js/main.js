@@ -24,8 +24,19 @@ function donateBtnHandler(event) {
     modal.showModal();
     let newInputNumber = totalAmountNumber + inputNumber;
     let newMainBalance = mainBalanceNumber - inputNumber;
+    const historySection = document.getElementById("historySection");
+    const currentDate = new Date();
+    const localDate = currentDate.toLocaleDateString();
+    const localTime = currentDate.toLocaleTimeString();
+
     if (event.target.id === "donateBtn1") {
       document.getElementById("totalAmount1").innerText = newInputNumber;
+      const div = document.createElement("div");
+      div.innerHTML = `
+     <h6>${inputValue} Taka is Donated for famine-2024 at Feni,Bangladesh</h6>
+     <p>Date: ${localDate} ${localTime} GMT +0600 (Bangladesh Standard Time)</p>
+     `;
+      historySection.appendChild(div);
     } else if (event.target.id === "donateBtn2") {
       document.getElementById("totalAmount2").innerText = newInputNumber;
     } else if (event.target.id === "donateBtn3") {
@@ -46,3 +57,13 @@ document
 document
   .getElementById("donateBtn3")
   .addEventListener("click", donateBtnHandler);
+
+// Donation and History buttons showup and closeup
+document.getElementById("donationBtn").addEventListener("click", function () {
+  document.getElementById("donationSection").classList.remove("hidden");
+  document.getElementById("historySection").classList.add("hidden");
+});
+document.getElementById("historyBtn").addEventListener("click", function () {
+  document.getElementById("historySection").classList.remove("hidden");
+  document.getElementById("donationSection").classList.add("hidden");
+});
