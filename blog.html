@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Important FAQ</title>
+    <!-- Lexend fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DaisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="lexend-font">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-opacity-20">
+      <!-- Navbar starts -->
+
+      <div
+        class="flex justify-evenly md:justify-between items-center md:px-28 py-6 bg-[#F9F7F3]"
+      >
+        <button
+          class="rounded-lg font-bold text-xs md:text-base px-6 py-2 md:px-8 md:py-3 bg-[#B4F461]"
+        >
+          Blog
+        </button>
+
+        <div class="flex items-center gap-2 md:gap-4">
+          <img class="w-6 md:w-9" src="./assets/logo.png" alt="" />
+          <a href="./index.html" class="font-bold md:text-xl text-xs">
+            <h1>Donate Bangladesh</h1></a
+          >
+        </div>
+        <div class="flex items-center text-xs md:text-base gap-1">
+          <img class="w-6 md:w-9" src="./assets/coin.png" alt="" />
+          <h3><span id="mainBalance">5500</span> BDT</h3>
+        </div>
+      </div>
+
+      <!-- Navbar ends -->
+    </header>
+    <main>
+      <section class="m-10 md:m-20">
+        <h1 class="font-bold text-3xl mb-8">Important FAQ</h1>
+        <!-- 4 questions in accordion -->
+        <div class="collapse collapse-arrow bg-base-200 p-6">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a programming interface for web
+              documents.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 p-6">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>By using getElementById() method. There are other mathods too</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 p-6">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation refers to the process of using event propagation
+              (bubbling) to handle events at a higher level in the DOM than the
+              element on which the event originated.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 p-6">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The classList object only provide methods to change the class of
+              an element. If you want to change other attributes like id , href
+              , or src , you can use the setAttribute() method.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

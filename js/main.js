@@ -39,8 +39,21 @@ function donateBtnHandler(event) {
       historySection.appendChild(div);
     } else if (event.target.id === "donateBtn2") {
       document.getElementById("totalAmount2").innerText = newInputNumber;
+
+      const div = document.createElement("div");
+      div.innerHTML = `
+     <h6>${inputValue} Taka is Donated for Flood Relief in Feni,Bangladesh</h6>
+     <p>Date: ${localDate} ${localTime} GMT +0600 (Bangladesh Standard Time)</p>
+     `;
+      historySection.appendChild(div);
     } else if (event.target.id === "donateBtn3") {
       document.getElementById("totalAmount3").innerText = newInputNumber;
+      const div = document.createElement("div");
+      div.innerHTML = `
+     <h6>${inputValue} Taka is Donated for Aid for Injured in the Quota Movement,Bangladesh</h6>
+     <p>Date: ${localDate} ${localTime} GMT +0600 (Bangladesh Standard Time)</p>
+     `;
+      historySection.appendChild(div);
     }
     document.getElementById("mainBalance").innerText = newMainBalance;
   } else {
